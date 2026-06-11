@@ -1,27 +1,95 @@
 <!doctype html>
-<html lang="en" class="bg-gradient-to-br from-slate-900 via-50% to-slate-950 via-slate-950 min-h-screen">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="favicon.svg">
+  <meta name="description" content="Rémy Vanherweghem: digital leader, from strategy to code. Ottawa–Gatineau." />
+  <link rel="icon" href="favicon.svg" />
   <title>Rémy Vanherweghem</title>
+
+  <!-- Fonts: Newsreader (display, print/publishing feel) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CDN for standalone preview. Remove when porting into your Vite build. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0E1116',
+            paper: '#E9E6DD',
+            quiet: '#8A8F98',
+            commons: '#5C8A6F',
+          },
+          fontFamily: {
+            display: ['Newsreader', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { background-color: #0E1116; }
+    ::selection { background-color: #5C8A6F; color: #0E1116; }
+    a { transition: color 160ms ease, border-color 160ms ease; }
+    @media (prefers-reduced-motion: reduce) {
+      a { transition: none; }
+    }
+  </style>
 </head>
 
-<body class="flex flex-col place-items-center justify-center min-h-screen gap-4">
+<body class="bg-ink text-paper font-body min-h-screen flex items-center justify-center px-6 antialiased">
 
-  <div
-    class="text-5xl bg-gradient-to-br from-slate-50 via-sky-100 to-zinc-400 bg-clip-text text-transparent h-14 drop-shadow-lg">
-    Rémy Vanherweghem
-  </div>
+  <main class="w-full max-w-xl py-20">
 
+    <h1 class="font-display text-5xl sm:text-6xl font-medium tracking-tight text-paper">
+      Rémy Vanherweghem
+    </h1>
 
-  <div class="flex flex-row gap-4 items-center">
-    <a href="mailto:remy.vanherweghem@pumax.info">Email</a>
-    <a href="http://github.com/remyvhw">GitHub</a>
-  </div>
+    <div class="mt-6 border-l-2 border-commons pl-4">
+      <p class="text-base text-paper/90">
+        Digital leader, from strategy to code.
+      </p>
+      <p class="mt-1 text-base text-quiet italic font-display">
+        Leader numérique, de la stratégie au code.
+      </p>
+    </div>
 
-  <script type="module" src="/main.js"></script>
+    <p class="mt-10 text-[15px] leading-relaxed text-paper/80">
+      I lead the digital practice at the Office of the Parliamentary Budget
+      Officer in Ottawa, where I build and operate the systems behind its
+      analyses and reporting to Parliament.
+    </p>
+
+    <nav class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm" aria-label="Contact links">
+      <a href="mailto:remy.vanherweghem@pumax.info"
+        class="text-paper/90 border-b border-paper/20 pb-0.5 hover:text-commons hover:border-commons focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-commons">
+        Email
+      </a>
+      <a href="https://github.com/remyvhw"
+        class="text-paper/90 border-b border-paper/20 pb-0.5 hover:text-commons hover:border-commons focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-commons">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/remyvhw"
+        class="text-paper/90 border-b border-paper/20 pb-0.5 hover:text-commons hover:border-commons focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-commons">
+        LinkedIn
+      </a>
+    </nav>
+
+    <p class="mt-16 text-xs tracking-wide uppercase text-quiet">
+      Ottawa&ndash;Gatineau, Canada
+    </p>
+
+  </main>
+
 </body>
 
 </html>
