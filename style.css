@@ -1,1 +1,22 @@
 @import 'tailwindcss';
+
+
+@theme {
+  /* Colors */
+  --color-ink: #0E1116;
+  --color-paper: #E9E6DD;
+  --color-quiet: #8A8F98;
+  --color-commons: #5C8A6F;
+ 
+  /* Font families */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: Inter, system-ui, sans-serif;
+}
+
+
+html { background-color: #0E1116; }
+::selection { background-color: #5C8A6F; color: #0E1116; }
+a { transition: color 160ms ease, border-color 160ms ease; }
+@media (prefers-reduced-motion: reduce) {
+    a { transition: none; }
+}
